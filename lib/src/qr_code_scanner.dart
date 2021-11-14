@@ -75,9 +75,7 @@ class _QRViewState extends State<QRView> {
     return NotificationListener(
       onNotification: onNotification,
       child: SizeChangedLayoutNotifier(
-        child: (widget.overlay != null)
-            ? _getPlatformQrViewWithOverlay()
-            : _getPlatformQrView(),
+        child: _getPlatformQrView(),
       ),
     );
   }
@@ -99,21 +97,21 @@ class _QRViewState extends State<QRView> {
     return false;
   }
 
-  Widget _getPlatformQrViewWithOverlay() {
-    return Stack(
-      children: [
-        _getPlatformQrView(),
-        Padding(
-          padding: widget.overlayMargin,
-          child: Container(
-            decoration: ShapeDecoration(
-              shape: widget.overlay!,
-            ),
-          ),
-        )
-      ],
-    );
-  }
+//   Widget _getPlatformQrViewWithOverlay() {
+//     return Stack(
+//       children: [
+//         _getPlatformQrView(),
+//         Padding(
+//           padding: widget.overlayMargin,
+//           child: Container(
+//             decoration: ShapeDecoration(
+//               shape: widget.overlay!,
+//             ),
+//           ),
+//         )
+//       ],
+//     );
+//   }
 
   Widget _getPlatformQrView() {
     Widget _platformQrView;
