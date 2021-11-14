@@ -34,9 +34,11 @@ class QRView extends StatefulWidget {
   /// [onQRViewCreated] gets called when the view is created
   final QRViewCreatedCallback onQRViewCreated;
 
-  /// Use [overlay] to provide an overlay for the view.
-  /// This can be used to create a certain scan area.
-  final QrScannerOverlayShape? overlay;
+//   /// Use [overlay] to provide an overlay for the view.
+//   /// This can be used to create a certain scan area.
+//   final QrScannerOverlayShape? overlay;
+    
+  final Widget? overlay;
 
   /// Use [overlayMargin] to provide a margin to [overlay]
   final EdgeInsetsGeometry overlayMargin;
