@@ -227,7 +227,7 @@ class QRViewController {
   bool get hasPermissions => _hasPermissions;
 
   /// Starts the barcode scanner
-  Future<void> _startScan(GlobalKey key, QrScannerOverlayShape? overlay,
+  Future<void> _startScan(GlobalKey key, Widget? overlay,
       List<BarcodeFormat>? barcodeFormats) async {
     // We need to update the dimension before the scan is started.
     try {
